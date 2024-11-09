@@ -15,8 +15,8 @@
   ],
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -32,6 +32,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "micromark-extension-abbr": "file:../micromark-extension-abbr",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
